@@ -39,9 +39,19 @@
         }
       }
 
-      const mycar = new Car("Ford");
+      class Model extends Car {
+        constructor(name, mod) {
+          super(name);
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ", it is a " + this.model;
+        }
+      }
 
-      document.write(mycar.present());
+      const mycar = new Model("Ford", "Mustang");
+
+      document.write(mycar.show());
     </script>
   </body>
 </html>
